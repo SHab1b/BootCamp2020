@@ -25,4 +25,4 @@ jobs:
       - name: Installing surge
         run: npm install -g surge
       - name: Deploying using surge
-        run: surge index.html bootcamp2020_shamshad.surge.sh --token ${{secrets.BOOT_CAMP_SECRET}}
+        run: surge index.html bootcamp2020_shamshad.surge.sh --token ${ {secrets.BOOT_CAMP_SECRET }}
