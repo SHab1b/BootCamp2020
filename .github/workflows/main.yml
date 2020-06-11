@@ -17,11 +17,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Setup Node.js enviornment 
+      - name: Installing Node
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - name: Install surge
+      # Runs a set of commands using the runners shell
+      - name: Installing surge
         run: npm install -g surge
-      - name: Run surge
-        run: surge ./ BootCamp_Assignment_automated_786.surge.sh --token ${{secrets.BOOT_CAMP_SECRET}}
+      - name: Deploying using surge
+        run: surge ./ bootcamp2020_shamshad.surge.sh --token ${{secrets.BOOT_CAMP_SECRET}}
